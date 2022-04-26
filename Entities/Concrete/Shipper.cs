@@ -1,0 +1,15 @@
+﻿using Core.Entities;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Entities.Concrete
+{
+    public class Shipper:IEntity
+    {
+        public int ShipperId { get; set; }
+        public string ShipperName { get; set; }
+        public int Freight { get; set; }
+
+    }
+}

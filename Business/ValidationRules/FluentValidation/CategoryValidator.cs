@@ -1,0 +1,16 @@
+﻿using Entities.Concrete;
+using FluentValidation;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Business.ValidationRules.FluentValidation
+{
+    public class CategoryValidator:AbstractValidator<Category>
+    {
+        public CategoryValidator()
+        {
+            RuleFor(c => c.CategoryName).NotEmpty().MinimumLength(3).WithMessage("Kategori adı 3 karakterden az olamaz.");
+        }
+    }
+}
